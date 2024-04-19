@@ -63,3 +63,6 @@ java -jar target/target/cardio_generator-1.0-SNAPSHOT.jar --patient-count 100 --
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+##Project Member
+- Student ID: 6362829
