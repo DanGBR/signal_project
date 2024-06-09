@@ -1,6 +1,6 @@
-package com.cardio_generator.generators;
+package main.java.com.cardio_generator.generators;
 
-import com.cardio_generator.outputs.OutputStrategy;
+import main.java.com.cardio_generator.outputs.OutputStrategy;
 
 /**
  * Interface representing a patient data generator

@@ -1,7 +1,7 @@
 package main.java.com.alerts;
 
-import com.data_management.DataStorage;
-import data_management.Patient;
+import main.java.com.data_management.DataStorage;
+import main.java.com.data_management.Patient;
 
 /**
  * The {@code AlertGenerator} class is responsible for monitoring patient data
@@ -11,7 +11,9 @@ import data_management.Patient;
  */
 public class AlertGenerator {
     private DataStorage dataStorage;
-
+    public static final long TIME_WINDOW_MS = 60000;// 60 seconds
+    public static final long HOUR_INTERVAL_MS = 3600000;
+    public static final long DAY_INTERVAL_MS = 86400000;
     /**
      * Constructs an {@code AlertGenerator} with a specified {@code DataStorage}.
      * The {@code DataStorage} is used to retrieve patient data that this class
@@ -46,7 +48,10 @@ public class AlertGenerator {
      *
      * @param alert the alert object containing details about the alert condition
      */
-    private void triggerAlert(Alert alert) {
+    public void triggerAlert(Alert alert) {
+        System.out.println("Patient ID: " + alert.getPatientId());
+        System.out.println("Condition: " + alert.getCondition());
+        System.out.println("Time: " + alert.getTimestamp());
         // Implementation might involve logging the alert or notifying staff
     }
 }

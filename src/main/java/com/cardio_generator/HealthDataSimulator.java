@@ -1,20 +1,20 @@
-package com.cardio_generator;
+package main.java.com.cardio_generator;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import com.cardio_generator.generators.AlertGenerator;
+import main.java.com.cardio_generator.generators.AlertGenerator;
 
-import com.cardio_generator.generators.BloodPressureDataGenerator;
-import com.cardio_generator.generators.BloodSaturationDataGenerator;
-import com.cardio_generator.generators.BloodLevelsDataGenerator;
-import com.cardio_generator.generators.ECGDataGenerator;
-import com.cardio_generator.outputs.ConsoleOutputStrategy;
-import com.cardio_generator.outputs.FileOutputStrategy;
-import com.cardio_generator.outputs.OutputStrategy;
-import com.cardio_generator.outputs.TcpOutputStrategy;
-import com.cardio_generator.outputs.WebSocketOutputStrategy;
+import main.java.com.cardio_generator.generators.BloodPressureDataGenerator;
+import main.java.com.cardio_generator.generators.BloodSaturationDataGenerator;
+import main.java.com.cardio_generator.generators.BloodLevelsDataGenerator;
+import main.java.com.cardio_generator.generators.ECGDataGenerator;
+import main.java.com.cardio_generator.outputs.ConsoleOutputStrategy;
+import main.java.com.cardio_generator.outputs.FileOutputStrategy;
+import main.java.com.cardio_generator.outputs.OutputStrategy;
+import main.java.com.cardio_generator.outputs.TcpOutputStrategy;
+import main.java.com.cardio_generator.outputs.WebSocketOutputStrategy;
 
 import java.util.Collections;
 import java.util.List;
@@ -33,6 +33,14 @@ public class HealthDataSimulator {
     private static ScheduledExecutorService scheduler;
     private static OutputStrategy outputStrategy = new ConsoleOutputStrategy(); // Default output strategy
     private static final Random random = new Random();
+    private static HealthDataSimulator instance;
+
+    public static synchronized HealthDataSimulator getInstance() {
+        if (instance == null) {
+            instance = new HealthDataSimulator();
+        }
+        return instance;
+    }
 
     /**
      * The main method of the program
@@ -41,7 +49,7 @@ public class HealthDataSimulator {
      * @param args Command line arguments
      * @throws IOException If an I/O error before it is executed
      */
-    public static void main(String[] args) throws IOException {
+    public static void simulateData(String[] args) throws IOException {
 
         parseArguments(args);
 

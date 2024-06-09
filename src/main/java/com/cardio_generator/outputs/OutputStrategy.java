@@ -1,4 +1,4 @@
-package com.cardio_generator.outputs;
+package main.java.com.cardio_generator.outputs;
 
 /**
  * Interface representing an output strategy for the patient data

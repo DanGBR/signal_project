@@ -1,8 +1,8 @@
-package com.cardio_generator.generators;
+package main.java.com.cardio_generator.generators;
 
 import java.util.Random;
 
-import com.cardio_generator.outputs.OutputStrategy;
+import main.java.com.cardio_generator.outputs.OutputStrategy;
 
 /**
  * Generates simulated alert data for patients

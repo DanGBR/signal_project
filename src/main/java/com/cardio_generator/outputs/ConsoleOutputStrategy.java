@@ -1,4 +1,4 @@
-package com.cardio_generator.outputs;
+package main.java.com.cardio_generator.outputs;
 
 public class ConsoleOutputStrategy implements OutputStrategy {
     @Override

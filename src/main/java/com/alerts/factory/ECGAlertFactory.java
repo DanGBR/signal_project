@@ -1,5 +1,5 @@
 package main.java.com.alerts.factory;
-import com.alerts.Alert;
+import main.java.com.alerts.Alert;
 
 public class ECGAlertFactory extends AlertFactory{
 
