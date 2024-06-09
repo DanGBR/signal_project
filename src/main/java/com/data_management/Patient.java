@@ -1,4 +1,4 @@
-package com.data_management;
+package main.java.com.data_management;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +52,7 @@ public class Patient {
      *         range
      */
     public List<PatientRecord> getRecords(long startTime, long endTime) {
+        return patientRecords;
         // TODO Implement and test this method
     }
 }

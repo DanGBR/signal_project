@@ -1,4 +1,4 @@
-package com.data_management;
+package main.java.com.data_management;
 
 /**
  * Represents a single record of patient data at a specific point in time.

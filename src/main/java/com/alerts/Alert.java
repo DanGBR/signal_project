@@ -1,4 +1,4 @@
-package com.alerts;
+package main.java.com.alerts;
 
 // Represents an alert
 public class Alert {

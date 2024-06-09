@@ -1,12 +1,12 @@
-package com.data_management;
+package main.java.com.data_management;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.alerts.AlertGenerator;
+import main.java.com.alerts.AlertGenerator;
 
-/**
+/*
  * Manages storage and retrieval of patient data within a healthcare monitoring
  * system.
  * This class serves as a repository for all patient records, organized by
